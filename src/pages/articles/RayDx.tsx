@@ -13,7 +13,7 @@ const RayDxArticle = () => {
 
       <main className="flex-1">
         <div className="max-w-3xl mx-auto px-6 pt-28 pb-16">
-          <nav className="mb-8 text-sm">
+          <nav className="mb-8 text-xs sm:text-sm">
             <a href="/" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Home</a>
             <span className="mx-2 text-portfolio-text-muted">/</span>
             <a href="/articles" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Articles</a>
@@ -23,13 +23,13 @@ const RayDxArticle = () => {
 
           <header className="mb-10">
             <time className="block text-sm text-portfolio-text-muted mb-2">June 15, 2025</time>
-            <h1 className="text-3xl md:text-4xl font-bold text-portfolio-text mb-4">RayDx Backend: Pneumonia Detection API with MobileNetV2 and xAI Report Generation</h1>
-            <p className="text-portfolio-text-muted leading-relaxed">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-4">RayDx Backend: Pneumonia Detection API with MobileNetV2 and xAI Report Generation</h1>
+            <p className="text-sm sm:text-base text-portfolio-text-muted leading-relaxed">
               A medical AI backend that analyzes chest X-ray images for pneumonia detection using a fine‑tuned MobileNetV2 model and generates professional radiology reports via xAI's Grok‑3, with production‑ready logging, validation, and deployment.
             </p>
           </header>
 
-          <section className="space-y-10">
+          <section className="space-y-8 sm:space-y-10">
             <div>
               <h2 className="text-xl font-semibold text-portfolio-text mb-3">Project Overview</h2>
               <ul className="list-disc pl-6 space-y-2 text-portfolio-text-muted">
@@ -55,7 +55,7 @@ const RayDxArticle = () => {
 
             <div>
               <h2 className="text-xl font-semibold text-portfolio-text mb-3">API Endpoints</h2>
-              <div className="space-y-2 text-portfolio-text-muted">
+              <div className="space-y-2 text-portfolio-text-muted text-sm sm:text-base">
                 <p><span className="text-portfolio-text font-medium">GET /</span> — Health check</p>
                 <p><span className="text-portfolio-text font-medium">GET /debug</span> — Debug information</p>
                 <p>
@@ -71,7 +71,7 @@ const RayDxArticle = () => {
 
             <div>
               <h2 className="text-xl font-semibold text-portfolio-text mb-3">Quick Start</h2>
-              <ol className="list-decimal pl-6 space-y-2 text-portfolio-text-muted">
+              <ol className="list-decimal pl-6 space-y-2 text-portfolio-text-muted text-sm sm:text-base">
                 <li>Clone repo and create a virtual environment</li>
                 <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
                 <li>Create <code>.env</code> with <code>XAI_API_KEY</code> and <code>PORT</code></li>
@@ -115,18 +115,18 @@ const RayDxArticle = () => {
 
             <div>
               <h2 className="text-xl font-semibold text-portfolio-text mb-3">Usage Examples</h2>
-              <p className="text-portfolio-text-muted mb-2">cURL</p>
+              <p className="text-portfolio-text-muted mb-2 text-sm sm:text-base">cURL</p>
               <pre className="bg-portfolio-surface/50 border border-portfolio-border/30 rounded p-3 overflow-x-auto text-xs"><code>{`curl -X POST \
   http://localhost:5000/predict \
   -H 'Content-Type: multipart/form-data' \
   -F 'file=@chest_xray.jpg'`}</code></pre>
-              <p className="text-portfolio-text-muted mt-4 mb-2">Python</p>
+              <p className="text-portfolio-text-muted mt-4 mb-2 text-sm sm:text-base">Python</p>
               <pre className="bg-portfolio-surface/50 border border-portfolio-border/30 rounded p-3 overflow-x-auto text-xs"><code>{`import requests
 url = "http://localhost:5000/predict"
 files = {"file": open("chest_xray.jpg", "rb")}
 response = requests.post(url, files=files)
 print(response.json())`}</code></pre>
-              <p className="text-portfolio-text-muted mt-4 mb-2">JavaScript</p>
+              <p className="text-portfolio-text-muted mt-4 mb-2 text-sm sm:text-base">JavaScript</p>
               <pre className="bg-portfolio-surface/50 border border-portfolio-border/30 rounded p-3 overflow-x-auto text-xs"><code>{`const fd = new FormData();
 fd.append('file', fileInput.files[0]);
 fetch('http://localhost:5000/predict', { method: 'POST', body: fd })

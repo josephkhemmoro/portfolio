@@ -6,7 +6,7 @@ const Footer = () => {
           <nav className="flex items-center gap-6 text-sm">
             <a href="#about" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200">About</a>
             <a href="/articles" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200">Articles</a>
-            <a href="#projects" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200">Projects</a>
+            <a href="/projects" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200">Projects</a>
           </nav>
           <p className="text-xs text-portfolio-text-muted">
             {new Date().getFullYear()} Joseph Khemmoro. All rights reserved.

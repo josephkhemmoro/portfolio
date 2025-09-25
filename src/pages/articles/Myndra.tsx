@@ -13,7 +13,7 @@ const MyndraArticle = () => {
 
       <main className="flex-1">
         <div className="max-w-3xl mx-auto px-6 pt-28 pb-16">
-          <nav className="mb-8 text-sm">
+          <nav className="mb-8 text-xs sm:text-sm">
             <a href="/" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Home</a>
             <span className="mx-2 text-portfolio-text-muted">/</span>
             <a href="/articles" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Articles</a>
@@ -23,13 +23,13 @@ const MyndraArticle = () => {
 
           <header className="mb-10">
             <time className="block text-sm text-portfolio-text-muted mb-2">September 24, 2025</time>
-            <h1 className="text-3xl md:text-4xl font-bold text-portfolio-text mb-4">Myndra: A Multi-Agent Orchestration Platform for Collaborative, Human‑Like AI</h1>
-            <p className="text-portfolio-text-muted leading-relaxed">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-4">Myndra: A Multi-Agent Orchestration Platform for Collaborative, Human‑Like AI</h1>
+            <p className="text-sm sm:text-base text-portfolio-text-muted leading-relaxed">
               Myndra is a multi-agent orchestration platform designed to simulate and deploy human-like AI agents that collaborate via shared memory, knowledge graphs, and natural language. It serves both as a research testbed and as a foundation for building adaptive, auditable AI systems.
             </p>
           </header>
 
-          <section className="space-y-10">
+          <section className="space-y-8 sm:space-y-10">
             <div>
               <h2 className="text-xl font-semibold text-portfolio-text mb-3">Project Overview</h2>
               <p className="text-portfolio-text-muted leading-relaxed">

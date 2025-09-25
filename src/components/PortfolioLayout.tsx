@@ -15,7 +15,7 @@ const PortfolioLayout = () => {
             <div className="lg:col-span-2">
               <ArticlesSection />
             </div>
-            <div className="sticky top-24">
+            <div className="lg:sticky lg:top-24">
               <WorkExperience />
             </div>
           </div>

@@ -13,7 +13,7 @@ const DTEArticle = () => {
 
       <main className="flex-1">
         <div className="max-w-3xl mx-auto px-6 pt-28 pb-16">
-          <nav className="mb-8 text-sm">
+          <nav className="mb-8 text-xs sm:text-sm">
             <a href="/" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Home</a>
             <span className="mx-2 text-portfolio-text-muted">/</span>
             <a href="/articles" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Articles</a>
@@ -23,16 +23,16 @@ const DTEArticle = () => {
 
           <header className="mb-10">
             <time className="block text-sm text-portfolio-text-muted mb-2">August 8, 2025</time>
-            <h1 className="text-3xl md:text-4xl font-bold text-portfolio-text mb-4">Building a Microsoft Teams Chatbot on Azure Functions for Enterprise Workflows (DTE Energy)</h1>
-            <p className="text-portfolio-text-muted leading-relaxed">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-4">Building a Microsoft Teams Chatbot on Azure Functions for Enterprise Workflows (DTE Energy)</h1>
+            <p className="text-sm sm:text-base text-portfolio-text-muted leading-relaxed">
               As a Software Engineer Intern at DTE Energy, I engineered a modular TypeScript Azure Functions app powering NLP-driven chatbot workflows in Microsoft Teams, integrated with ServiceNow, and deployed with Terraform. The result: faster responses, fewer manual queries, and production-ready automation.
             </p>
           </header>
 
-          <section className="space-y-10">
+          <section className="space-y-8 sm:space-y-10">
             <div>
               <h2 className="text-xl font-semibold text-portfolio-text mb-3">Project Overview</h2>
-              <p className="text-portfolio-text-muted leading-relaxed">
+              <p className="text-sm sm:text-base text-portfolio-text-muted leading-relaxed">
                 The goal was to enable employees to retrieve real-time enterprise data directly in Teams. I built serverless workflows using Azure Functions that validated inputs, called ServiceNow APIs, and returned context-aware responses. Terraform automated infrastructure to ensure consistent, repeatable deployments.
               </p>
             </div>

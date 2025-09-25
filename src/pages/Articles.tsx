@@ -38,8 +38,8 @@ const Articles = () => {
       <main className="flex-1">
         <div className="max-w-5xl mx-auto px-6 pt-28 pb-16">
           <header className="mb-10">
-            <h1 className="text-3xl md:text-4xl font-bold text-portfolio-text mb-3">Articles</h1>
-            <p className="text-portfolio-text-muted">Writings on the details and process behind all of my projects as well as the tech stacks behind them, collected in chronological order.</p>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3">Articles</h1>
+            <p className="text-sm sm:text-base text-portfolio-text-muted">Writings on the details and process behind all of my projects as well as the tech stacks behind them, collected in chronological order.</p>
           </header>
 
           <div className="space-y-10">
@@ -49,7 +49,7 @@ const Articles = () => {
                 <h2 className="text-2xl font-semibold text-portfolio-text mb-3 group-hover:text-portfolio-accent transition-colors">
                   <Link to={a.to}>{a.title}</Link>
                 </h2>
-                <p className="text-portfolio-text-muted leading-relaxed mb-4">{a.summary}</p>
+                <p className="text-sm sm:text-base text-portfolio-text-muted leading-relaxed mb-4">{a.summary}</p>
                 <div>
                   <Link to={a.to} className="text-portfolio-accent hover:text-portfolio-accent/80">
                     Read full article →
