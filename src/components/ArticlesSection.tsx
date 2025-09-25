@@ -1,26 +1,32 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ArticlesSection = () => {
   const articles = [
     {
-      date: "April 21, 2024",
-      title: "Regression Models for AirBnB Price Prediction in San Diego",
-      description: "This article discusses the process of ingesting and cleaning data to train Support Vector and Random Forest regression models on San Diego AirBnB data to predict the nightly price of a listing.",
+      date: "September 24, 2025",
+      title: "Myndra: A Multi-Agent Orchestration Platform for Collaborative, Human‑Like AI",
+      description:
+        "Introducing Myndra, a platform for coordinating human-like AI agents with shared memory and knowledge graphs, with a radiology-focused prototype.",
+      url: "/articles/myndra",
     },
     {
-      date: "February 11, 2024", 
-      title: "Creating a CI/CD Pipeline",
-      description: "Utilizing GitLab CI, AWS, and Docker, I automated the building, testing, containerization and deployment of a React application to the cloud.",
+      date: "August 8, 2025",
+      title: "DTE Energy: Microsoft Teams Chatbot on Azure Functions",
+      description:
+        "How I engineered a modular TypeScript Azure Functions app with ServiceNow integrations and Terraform to power enterprise chatbot workflows.",
+      url: "/articles/dte",
     },
     {
-      date: "December 16, 2023",
-      title: "Predicting Reservoir Storage Capacity Using Machine Learning",
-      description: "This project compared the effectiveness of six different machine learning techniques in predicting reservoir storage value based off of historical climate and reservoir data. Top models recorded up to 99.8% effectiveness in hindcast reporting.",
+      date: "June 15, 2025",
+      title: "RayDx Backend: Pneumonia Detection API",
+      description:
+        "Chest X-ray pneumonia detection using a fine-tuned MobileNetV2 with xAI Grok-3 report generation and production-ready Flask APIs.",
+      url: "/articles/raydx",
     },
     {
-      date: "October 2, 2023",
-      title: "Tech for Good: Creating Trust in Online Marketplaces with Vouchify",
-      description: "",
+      date: "June 25, 2025",
+      title: "CVision: An AI "
     }
   ];
 
@@ -47,13 +53,23 @@ const ArticlesSection = () => {
                     {article.description}
                   </p>
                 )}
-                <a 
-                  href="#" 
-                  className="inline-flex items-center text-portfolio-accent hover:text-portfolio-accent/80 transition-colors duration-200"
-                >
-                  Read article
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </a>
+                {article.url ? (
+                  <Link
+                    to={article.url}
+                    className="inline-flex items-center text-portfolio-accent hover:text-portfolio-accent/80 transition-colors duration-200"
+                  >
+                    Read article
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </Link>
+                ) : (
+                  <a
+                    href="#"
+                    className="inline-flex items-center text-portfolio-accent hover:text-portfolio-accent/80 transition-colors duration-200"
+                  >
+                    Read article
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </a>
+                )}
               </div>
             </div>
           </article>

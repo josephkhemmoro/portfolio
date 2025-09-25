@@ -80,16 +80,16 @@ const WorkExperience = () => {
   return (
     <div className="space-y-8">
       {/* Work Section */}
-      <div className="bg-portfolio-surface rounded-lg p-6">
+      <div className="rounded-2xl border border-portfolio-border/30 bg-portfolio-surface/40 p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Briefcase className="w-5 h-5 text-portfolio-text-muted" />
           <h3 className="text-lg font-semibold text-portfolio-text">Work</h3>
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-3">
           {workExperiences.map((work, index) => (
-            <div key={index} className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center overflow-hidden">
+            <div key={index} className="flex items-center gap-4 rounded-xl px-3 py-2 hover:bg-portfolio-hover/40 transition-colors">
+              <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center overflow-hidden border border-portfolio-border/30">
                 {work.logoUrl ? (
                   <img
                     src={work.logoUrl}
@@ -109,23 +109,23 @@ const WorkExperience = () => {
           ))}
         </div>
         
-        <Button variant="ghost" className="w-full mt-6 text-portfolio-text-muted hover:text-portfolio-text">
+        <Button variant="ghost" className="w-full mt-6 text-portfolio-text hover:bg-portfolio-surface/60 border border-portfolio-border/20">
           <Download className="w-4 h-4 mr-2" />
           Download Resume
         </Button>
       </div>
 
       {/* Education Section */}
-      <div className="bg-portfolio-surface rounded-lg p-6">
+      <div className="rounded-2xl border border-portfolio-border/30 bg-portfolio-surface/40 p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <GraduationCap className="w-5 h-5 text-portfolio-text-muted" />
           <h3 className="text-lg font-semibold text-portfolio-text">Education</h3>
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-3">
           {education.map((edu, index) => (
-            <div key={index} className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center">
+            <div key={index} className="flex items-center gap-4 rounded-xl px-3 py-2 hover:bg-portfolio-hover/40 transition-colors">
+              <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center border border-portfolio-border/30 overflow-hidden">
                 {edu.iconUrl ? (
                   <img
                     src={edu.iconUrl}
@@ -145,23 +145,23 @@ const WorkExperience = () => {
           ))}
         </div>
         
-        <Button variant="ghost" className="w-full mt-6 text-portfolio-text-muted hover:text-portfolio-text">
+        <Button variant="ghost" className="w-full mt-6 text-portfolio-text hover:bg-portfolio-surface/60 border border-portfolio-border/20">
           <Download className="w-4 h-4 mr-2" />
           Download Transcript
         </Button>
       </div>
 
       {/* Technical Section */}
-      <div className="bg-portfolio-surface rounded-lg p-6">
+      <div className="rounded-2xl border border-portfolio-border/30 bg-portfolio-surface/40 p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Code className="w-5 h-5 text-portfolio-text-muted" />
           <h3 className="text-lg font-semibold text-portfolio-text">Technical</h3>
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-3">
           {technical.map((tech, index) => (
-            <div key={index} className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center">
+            <div key={index} className="flex items-center gap-4 rounded-xl px-3 py-2 hover:bg-portfolio-hover/40 transition-colors">
+              <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center border border-portfolio-border/30 overflow-hidden">
                 {tech.iconUrl ? (
                   <img
                     src={tech.iconUrl}

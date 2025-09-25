@@ -1,5 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,8 +15,26 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const location = useLocation();
+
   return (
-    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-auto max-w-6xl mx-auto rounded-full transition-all duration-300 ${
+    <>
+      {location.pathname !== "/" && (
+        <a
+          href="/"
+          className="fixed top-4 left-5 z-50 block"
+          title="Back to Home"
+          aria-label="Back to Home"
+        >
+          <img
+            src={profilePhoto}
+            alt="Profile photo"
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-portfolio-border/40 shadow-sm object-cover"
+          />
+        </a>
+      )}
+
+      <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 w-auto max-w-6xl mx-auto rounded-full transition-all duration-300 ${
       isScrolled 
         ? 'bg-portfolio-bg/90 shadow-lg border border-portfolio-border/20 py-3 px-6' 
         : 'bg-portfolio-bg/70 backdrop-blur-sm border border-portfolio-border/10 py-4 px-8'
@@ -22,16 +42,16 @@ const Navigation = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <a 
-            href="#about" 
+            href="/" 
             className="text-portfolio-text hover:text-portfolio-accent transition-colors duration-200 text-sm font-medium"
           >
             About
           </a>
           <a 
-            href="#docs" 
+            href="/articles" 
             className="text-portfolio-text hover:text-portfolio-accent transition-colors duration-200 text-sm font-medium"
           >
-            Docs
+            Articles
           </a>
           <a 
             href="#projects" 
@@ -42,6 +62,7 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 
