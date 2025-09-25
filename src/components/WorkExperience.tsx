@@ -80,13 +80,13 @@ const WorkExperience = () => {
   return (
     <div className="space-y-8">
       {/* Work Section */}
-      <div className="rounded-2xl border border-portfolio-border/30 bg-portfolio-surface/40 p-6 shadow-sm">
+      <div className="rounded-2xl border border-portfolio-border/20 bg-portfolio-bg p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Briefcase className="w-5 h-5 text-portfolio-text-muted" />
           <h3 className="text-lg font-semibold text-portfolio-text">Work</h3>
         </div>
         
-        <div className="space-y-3">
+        <div className="space-y-1">
           {workExperiences.map((work, index) => (
             <div key={index} className="flex items-center gap-4 rounded-xl px-3 py-2 hover:bg-portfolio-hover/40 transition-colors">
               <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center overflow-hidden border border-portfolio-border/30">
@@ -116,13 +116,13 @@ const WorkExperience = () => {
       </div>
 
       {/* Education Section */}
-      <div className="rounded-2xl border border-portfolio-border/30 bg-portfolio-surface/40 p-6 shadow-sm">
+      <div className="rounded-2xl border border-portfolio-border/20 bg-portfolio-bg p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <GraduationCap className="w-5 h-5 text-portfolio-text-muted" />
           <h3 className="text-lg font-semibold text-portfolio-text">Education</h3>
         </div>
         
-        <div className="space-y-3">
+        <div className="space-y-1">
           {education.map((edu, index) => (
             <div key={index} className="flex items-center gap-4 rounded-xl px-3 py-2 hover:bg-portfolio-hover/40 transition-colors">
               <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center border border-portfolio-border/30 overflow-hidden">
@@ -152,13 +152,13 @@ const WorkExperience = () => {
       </div>
 
       {/* Technical Section */}
-      <div className="rounded-2xl border border-portfolio-border/30 bg-portfolio-surface/40 p-6 shadow-sm">
+      <div className="rounded-2xl border border-portfolio-border/20 bg-portfolio-bg p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Code className="w-5 h-5 text-portfolio-text-muted" />
           <h3 className="text-lg font-semibold text-portfolio-text">Technical</h3>
         </div>
         
-        <div className="space-y-3">
+        <div className="space-y-1">
           {technical.map((tech, index) => (
             <div key={index} className="flex items-center gap-4 rounded-xl px-3 py-2 hover:bg-portfolio-hover/40 transition-colors">
               <div className="w-10 h-10 bg-portfolio-hover rounded-lg flex items-center justify-center border border-portfolio-border/30 overflow-hidden">

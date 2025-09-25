@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --radius: 0.5rem;
     
     /* Portfolio specific colors */
-    --portfolio-bg: 0 0% 9%;     /* dark gray */
+    --portfolio-bg: 240 7% 10%;     /* dark gray */
     --portfolio-surface: 0 0% 16%;
     --portfolio-text: 0 0% 98%;    /* keep high contrast text */
     --portfolio-text-muted: 0 0% 63%;

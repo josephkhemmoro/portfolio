@@ -39,7 +39,7 @@ const Articles = () => {
         <div className="max-w-5xl mx-auto px-6 pt-28 pb-16">
           <header className="mb-10">
             <h1 className="text-3xl md:text-4xl font-bold text-portfolio-text mb-3">Articles</h1>
-            <p className="text-portfolio-text-muted">Longer summaries and write‑ups of recent projects and research.</p>
+            <p className="text-portfolio-text-muted">Writings on the details and process behind all of my projects as well as the tech stacks behind them, collected in chronological order.</p>
           </header>
 
           <div className="space-y-10">
