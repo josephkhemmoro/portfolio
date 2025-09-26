@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# Joseph Khemmoro — Personal Portfolio
 
-## Project info
+This repository contains my personal portfolio website. It showcases my work, articles, and background, and serves as a central place to learn more about me and how to get in touch.
 
-**URL**: https://lovable.dev/projects/39204c65-3eb0-4d69-aa80-429a7f6ccf8d
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+Built with a modern, fast, and accessible frontend stack:
 
-**Use Lovable**
+- Vite (bundler + dev server)
+- React + TypeScript
+- Tailwind CSS (utility-first styling)
+- shadcn/ui (accessible, composable UI components)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/39204c65-3eb0-4d69-aa80-429a7f6ccf8d) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
+Key directories you might care about:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- `src/components/` — Reusable UI building blocks (e.g., `Footer.tsx`, `ArticlesSection.tsx`).
+- `src/pages/` — Top-level pages that make up the site (e.g., `Articles.tsx`).
+- `src/pages/articles/` — Individual article pages written in TSX (e.g., `DTE.tsx`, `RayDx.tsx`).
+- `index.html` — Vite entry HTML file.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The site is designed to be responsive and fast, with a focus on clean typography, accessible components, and maintainable code.
 
-Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Local Development
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Prerequisites:
+- Node.js (LTS recommended) and npm
 
-# Step 3: Install the necessary dependencies.
-npm i
+Install dependencies and start a local dev server with hot reloading:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Common scripts:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `npm run dev` — Start the Vite dev server
+- `npm run build` — Create a production build
+- `npm run preview` — Preview the production build locally
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+This is a static site built with Vite, so it can be deployed to any static hosting provider (e.g., Vercel, Netlify, GitHub Pages). The production output is generated in `dist/` after running `npm run build`.
 
-This project is built with:
+Example steps:
+1. Build: `npm run build`
+2. Deploy the contents of `dist/` to your hosting provider of choice
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+## How It Was Made
 
-Simply open [Lovable](https://lovable.dev/projects/39204c65-3eb0-4d69-aa80-429a7f6ccf8d) and click on Share -> Publish.
+- The project was scaffolded with Vite and set up with React + TypeScript for type safety and a great developer experience.
+- Styling is primarily handled with Tailwind CSS, enabling rapid iteration while keeping styles consistent.
+- I integrated `shadcn/ui` to ensure accessible, composable UI primitives and a consistent design language.
+- Content such as articles lives in `src/pages/articles/` as TSX files, which allows mixing content and JSX for custom layouts.
+- Reusable components (like the articles section and footer) live under `src/components/` to keep the codebase modular and easy to maintain.
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes, you can!
+## Contributing / Feedback
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This portfolio is primarily for personal use, but I welcome feedback and suggestions. Feel free to open an issue or reach out.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## License
+
+This project’s code is available under the MIT License. If you reuse parts of it, a link back is appreciated.
