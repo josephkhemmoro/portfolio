@@ -109,9 +109,19 @@ const WorkExperience = () => {
           ))}
         </div>
         
-        <Button variant="ghost" className="w-full mt-6 text-portfolio-text hover:bg-portfolio-surface/60 border border-portfolio-border/20">
-          <Download className="w-4 h-4 mr-2" />
-          Download Resume
+        <Button
+          variant="ghost"
+          className="w-full mt-6 text-portfolio-text hover:bg-portfolio-surface/60 border border-portfolio-border/20"
+          asChild
+        >
+          <a
+            href="https://drive.google.com/file/d/1UHnyXghnDwTkg58BFPehiK8tkQlc9h63/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download Resume
+          </a>
         </Button>
       </div>
 
@@ -145,9 +155,19 @@ const WorkExperience = () => {
           ))}
         </div>
         
-        <Button variant="ghost" className="w-full mt-6 text-portfolio-text hover:bg-portfolio-surface/60 border border-portfolio-border/20">
-          <Download className="w-4 h-4 mr-2" />
-          Download Transcript
+        <Button
+          variant="ghost"
+          className="w-full mt-6 text-portfolio-text hover:bg-portfolio-surface/60 border border-portfolio-border/20"
+          asChild
+        >
+          <a
+            href="https://drive.google.com/file/d/1KP5BFr3zkhM7IZTqMZNE-8JWJo7Mp6D5/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download Transcript
+          </a>
         </Button>
       </div>
 
