@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -88,12 +89,42 @@ export default {
             height: "0",
           },
         },
+        "bubble-pop": {
+          "0%": {
+            transform: "scale(0.9) translateY(8px)",
+            opacity: "0",
+          },
+          "60%": {
+            transform: "scale(1.03) translateY(0)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(1) translateY(0)",
+            opacity: "1",
+          },
+        },
+        "bubble-pop-out": {
+          "0%": {
+            transform: "scale(1) translateY(0)",
+            opacity: "1",
+          },
+          "30%": {
+            transform: "scale(1.02) translateY(0)",
+            opacity: "0.95",
+          },
+          "100%": {
+            transform: "scale(0.95) translateY(6px)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bubble-pop": "bubble-pop 0.28s cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "bubble-pop-out": "bubble-pop-out 0.3s ease-in-out forwards",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

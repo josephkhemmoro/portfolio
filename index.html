@@ -7,6 +7,15 @@
     <meta name="description" content="Student, software engineer, innovator, and dedicated learner" />
     <meta name="author" content="Joseph Khemmoro" />
 
+    <!-- Match the app background to avoid white flash and set cached wallpaper color on mobile -->
+    <meta name="theme-color" content="#111318" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Inline critical background to cover initial paint before CSS loads -->
+    <style>
+      html, body, #root { background-color: hsl(240 7% 10%); }
+    </style>
+
     <meta property="og:title" content="Joseph Khemmoro - Software Engineering Portfolio" />
     <meta property="og:description" content="Student, software engineer, innovator, and dedicated learner" />
     <meta property="og:type" content="website" />
