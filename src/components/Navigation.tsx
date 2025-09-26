@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Navigation = () => {
@@ -45,24 +45,24 @@ const Navigation = () => {
     }`}>
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-8">
-          <a 
-            href="/" 
+          <Link 
+            to="/" 
             className="text-portfolio-text hover:text-portfolio-accent transition-colors duration-200 text-sm font-medium"
           >
             About
-          </a>
-          <a 
-            href="/articles" 
+          </Link>
+          <Link 
+            to="/articles" 
             className="text-portfolio-text hover:text-portfolio-accent transition-colors duration-200 text-sm font-medium"
           >
             Articles
-          </a>
-          <a 
-            href="/projects" 
+          </Link>
+          <Link 
+            to="/projects" 
             className="text-portfolio-text hover:text-portfolio-accent transition-colors duration-200 text-sm font-medium"
           >
             Projects
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
@@ -108,27 +108,27 @@ const Navigation = () => {
               }
             }}
           >
-            <a 
-              href="/" 
+            <Link 
+              to="/" 
               className="block px-4 py-3 text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-hover/40 transition-colors duration-200 text-sm font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
-            </a>
-            <a 
-              href="/articles" 
+            </Link>
+            <Link 
+              to="/articles" 
               className="block px-4 py-3 text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-hover/40 transition-colors duration-200 text-sm font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Articles
-            </a>
-            <a 
-              href="/projects" 
+            </Link>
+            <Link 
+              to="/projects" 
               className="block px-4 py-3 text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-hover/40 transition-colors duration-200 text-sm font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Projects
-            </a>
+            </Link>
           </div>
         )}
       </nav>
