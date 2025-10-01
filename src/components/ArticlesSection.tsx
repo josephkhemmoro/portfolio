@@ -53,7 +53,7 @@ const ArticlesSection = () => {
             </p>
           )}
 
-          {(article.url ? (
+          {article.url ? (
             <Link
               to={article.url}
               className="inline-flex items-center text-portfolio-accent hover:text-portfolio-accent/80 transition-colors duration-200 text-sm sm:text-base"
@@ -61,13 +61,13 @@ const ArticlesSection = () => {
               Read article <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           ) : (
-            <a
-              href="#"
-              className="inline-flex items-center text-portfolio-accent hover:text-portfolio-accent/80 transition-colors duration-200 text-sm sm:text-base"
+            <span
+              aria-disabled
+              className="inline-flex items-center text-portfolio-text-muted cursor-not-allowed text-sm sm:text-base"
             >
               Read article <ChevronRight className="w-4 h-4 ml-1" />
-            </a>
-          ))}
+            </span>
+          )}
         </div>
       </div>
     </article>

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const DTEArticle = () => {
   useEffect(() => {
@@ -14,9 +15,9 @@ const DTEArticle = () => {
       <main className="flex-1">
         <div className="max-w-3xl mx-auto px-6 pt-28 pb-16">
           <nav className="mb-8 text-xs sm:text-sm">
-            <a href="/" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Home</a>
+            <Link to="/" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Home</Link>
             <span className="mx-2 text-portfolio-text-muted">/</span>
-            <a href="/articles" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Articles</a>
+            <Link to="/articles" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Articles</Link>
             <span className="mx-2 text-portfolio-text-muted">/</span>
             <span className="text-portfolio-text">DTE Energy Chatbot & Azure Functions</span>
           </nav>

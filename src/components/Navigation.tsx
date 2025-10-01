@@ -23,8 +23,8 @@ const Navigation = () => {
   return (
     <>
       {location.pathname !== "/" && (
-        <a
-          href="/"
+        <Link
+          to="/"
           className="fixed top-4 left-4 sm:left-5 z-50 block"
           title="Back to Home"
           aria-label="Back to Home"
@@ -34,7 +34,7 @@ const Navigation = () => {
             alt="Profile photo"
             className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-portfolio-border/40 shadow-sm object-cover"
           />
-        </a>
+        </Link>
       )}
 
       {/* Desktop Navigation */}
