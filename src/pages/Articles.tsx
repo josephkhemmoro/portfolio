@@ -10,6 +10,13 @@ const Articles = () => {
 
   const articles = [
     {
+      date: "October 3, 2025",
+      title: "DTE Energy Hackathon: Optimized Routing Simulator for Outage Dispatch Crews",
+      summary:
+        "During a DTE Energy hackathon, our team built an intelligent routing optimization system to help dispatch crews respond to power outages more efficiently. The solution combines real-time data processing, route optimization algorithms, and an intuitive interface to minimize response times and maximize crew utilization.",
+      to: "/articles/dte-hackathon",
+    },
+    {
       date: "September 24, 2025",
       title: "Myndra: A Multi-Agent Orchestration Platform for Collaborative, Human‑Like AI",
       summary:

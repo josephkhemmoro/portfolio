@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 const ArticlesSection = () => {
   const articles = [
     {
+      date: "October 3, 2025",
+      title: "DTE Energy Hackathon: Optimized Routing Simulator for Outage Dispatch Crews",
+      description:
+        "Built an intelligent routing optimization system during a DTE hackathon to help dispatch crews respond to power outages more efficiently with real-time route optimization.",
+      url: "/articles/dte-hackathon",
+    },
+    {
       date: "September 24, 2025",
       title: "Myndra: A Multi-Agent Orchestration Platform for Collaborative, Human‑Like AI",
       description:
