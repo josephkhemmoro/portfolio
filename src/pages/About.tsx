@@ -53,7 +53,7 @@ const About = () => {
               
             </div>
 
-            <div className="lg:sticky lg:top-24 order-last lg:order-none">
+            <div className="lg:top-24 order-last lg:order-none">
               <div className="relative w-full max-w-sm mx-auto lg:mx-0">
                 <div className="rounded-3xl overflow-hidden border border-portfolio-border/30 shadow-xl rotate-3">
                   <img
