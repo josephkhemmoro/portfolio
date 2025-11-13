@@ -46,7 +46,7 @@ const Navigation = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Link 
-            to="/" 
+            to="/about" 
             className="text-portfolio-text hover:text-portfolio-accent transition-colors duration-200 text-sm font-medium"
           >
             About
@@ -109,7 +109,7 @@ const Navigation = () => {
             }}
           >
             <Link 
-              to="/" 
+              to="/about" 
               className="block px-4 py-3 text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-hover/40 transition-colors duration-200 text-sm font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
