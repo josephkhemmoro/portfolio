@@ -16,12 +16,12 @@ const PhotoMarquee = () => {
   return (
     <div className="relative overflow-hidden">
       <div
-        className="flex gap-4 will-change-transform animate-marquee"
+        className="flex w-max gap-4 will-change-transform animate-marquee"
         style={{
           // adjust to taste; larger = slower
           // 40s default, override by setting --marquee-duration on parent
           // @ts-ignore - CSS var string ok
-          '--marquee-duration': '40s',
+          '--marquee-duration': '60s',
         }}
       >
         {loop.map((src, i) => (
