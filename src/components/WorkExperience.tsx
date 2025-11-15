@@ -115,7 +115,7 @@ const WorkExperience = () => {
           asChild
         >
           <a
-            href="https://drive.google.com/file/d/1UHnyXghnDwTkg58BFPehiK8tkQlc9h63/view?usp=sharing"
+            href="https://drive.google.com/file/d/1lQK-niZd8cjcgWQsD-UVRV_1ADLYIRgE/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
