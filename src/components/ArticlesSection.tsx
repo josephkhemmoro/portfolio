@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 const ArticlesSection = () => {
   const articles = [
     {
+      date: "November 5, 2025",
+      title: "Active Pothole Detection using YOLOv8",
+      description:
+        "Real-time pothole detection on road surfaces using YOLOv8, Python, and OpenCV, drawing bounding boxes around hazards in images or video streams for inspection and monitoring.",
+      url: "/articles/active-pothole-detection",
+    },
+    {
       date: "October 3, 2025",
       title: "DTE Energy Hackathon: Optimized Routing Simulator for Outage Dispatch Crews",
       description:

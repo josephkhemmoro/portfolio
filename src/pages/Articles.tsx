@@ -10,6 +10,13 @@ const Articles = () => {
 
   const articles = [
     {
+      date: "November 5, 2025",
+      title: "Active Pothole Detection using YOLOv8",
+      summary:
+        "A computer vision project that uses YOLOv8, Python, and OpenCV to detect potholes on road surfaces in real time from images or video streams, with bounding boxes rendered around hazards for inspection and monitoring.",
+      to: "/articles/active-pothole-detection",
+    },
+    {
       date: "October 3, 2025",
       title: "DTE Energy Hackathon: Optimized Routing Simulator for Outage Dispatch Crews",
       summary:

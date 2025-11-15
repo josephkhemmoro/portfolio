@@ -11,6 +11,7 @@ import MyndraArticle from "./pages/articles/Myndra";
 import DTEArticle from "./pages/articles/DTE";
 import RayDxArticle from "./pages/articles/RayDx";
 import DTEHackathonArticle from "./pages/articles/DTEHackathon";
+import ActivePotholeDetectionArticle from "./pages/articles/ActivePotholeDetection";
 import Articles from "./pages/Articles";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/articles/dte" element={<DTEArticle />} />
           <Route path="/articles/myndra" element={<MyndraArticle />} />
           <Route path="/articles/dte-hackathon" element={<DTEHackathonArticle />} />
+          <Route path="/articles/active-pothole-detection" element={<ActivePotholeDetectionArticle />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
