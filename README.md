@@ -1,6 +1,17 @@
 # Joseph Khemmoro — Personal Portfolio
 
-This repository contains my personal portfolio website. It showcases my work, articles, and background, and serves as a central place to learn more about me and how to get in touch.
+This repository contains my personal portfolio website—a living document that evolves alongside my journey as a software engineer. It showcases my work, articles, and background, serving as both a reflection of where I've been and a commitment to where I'm going.
+
+## A Living Portfolio
+
+This portfolio isn't just a static snapshot—it's an ongoing commitment to growth and transparency. As I continue my journey as a software engineer, I'm dedicated to:
+
+- **Documenting my learning** — New articles, insights, and technical deep-dives as I explore different technologies and solve challenging problems
+- **Showcasing evolution** — Regular updates to reflect new projects, skills, and experiences
+- **Sharing authentically** — Honest reflections on both successes and lessons learned along the way
+- **Building in public** — Keeping this codebase itself as a testament to my development practices and attention to craft
+
+Every commit here represents not just code, but a step forward in my career. I'm committed to maintaining this space as an accurate, up-to-date representation of my capabilities and growth as an engineer.
 
 
 ## Tech Stack
@@ -64,7 +75,7 @@ Example steps:
 
 ## Contributing / Feedback
 
-This portfolio is primarily for personal use, but I welcome feedback and suggestions. Feel free to open an issue or reach out.
+This portfolio is a personal project and a continuous work in progress. As I grow as a software engineer, this site will grow with me. I welcome feedback, suggestions, and conversations about the work showcased here. Feel free to open an issue or reach out directly.
 
 
 ## License
