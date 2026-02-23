@@ -1,12 +1,19 @@
 import { Briefcase, GraduationCap, Code, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import dteLogo from "../assets/dtelogo.png";
+import mangoLogo from "../assets/mangologo.svg";
 
 const WorkExperience = () => {
   const workExperiences = [
     {
+      company: "Mango Cannabis",
+      position: "Software Developer Intern",
+      duration: "Jan. 2026 — Present",
+      logoUrl: mangoLogo
+    },
+    {
       company: "DTE Energy",
-      position: "Software Engineer Intern",
+      position: "Software Developer Intern",
       duration: "Feb. 2025 — Present",
       logoUrl: dteLogo
     },
@@ -18,7 +25,7 @@ const WorkExperience = () => {
     },
     {
       company: "The Global Tech Experience",
-      position: "Software Engineer Intern",
+      position: "Software Developer Intern",
       duration: "May 2023 — Oct. 2023",
       logoUrl: "https://s3.us-west-1.amazonaws.com/images.jumpstart.me/frontend/careers/gca-globe-logo-navy.svg"
     },
@@ -115,7 +122,7 @@ const WorkExperience = () => {
           asChild
         >
           <a
-            href="https://drive.google.com/file/d/1lQK-niZd8cjcgWQsD-UVRV_1ADLYIRgE/view?usp=sharing"
+            href="https://cvws.icloud-content.com/B/AeAqmtPoDxtbvczRECAWsh1dYfFpAZ9NzXaGGF3EzAdPXJbQeBxnDkv4/khemmoro_resume.pdf?o=Au_zWLTavIYEaTnw0egaj_DDQS4JE95zOpeMxCkciEM0&v=1&x=3&a=CAog-uncu_UDAoLlzqVq7kciVFXhR0lZ4LD-p4tvh6FzTccSbxClz6jHyDMYpayEycgzIgEAUgRdYfFpWgRnDkv4aienGUV9sgpyRcDGulqogItrAozUUPdwQIV8J0h7IZ6hzhiGcIbbzWFyJ6UaWF3cqMuHV2Yxgj58xFmuJ_H0-Eu1IoRVYfOlbISPlwpvcpJUyg&e=1771827172&fl=&r=7178a6c5-592e-4bb7-8e6f-65f65b35c0e7-1&k=A8g-5zWh8ghmHtutGHzgOg&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=49&s=jR0RvYKREDAQkWo81PNcPfeI66U&cd=i"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -161,7 +168,7 @@ const WorkExperience = () => {
           asChild
         >
           <a
-            href="https://drive.google.com/file/d/1KP5BFr3zkhM7IZTqMZNE-8JWJo7Mp6D5/view?usp=sharing"
+            href="https://cvws.icloud-content.com/B/AaoErTGdgOV9Y7YP97lG9-ipnxI8AeF3wZs3s834TQMutHHDUv0JkxJM/Transcript_JOSEPHKHEMMORO.pdf?o=AnWTusJfnnjkTOlbevN9v1WIJlds8gG-LS5MxHkjlZh2&v=1&x=3&a=CAogf9g7y4ESo-knCKDrJXUctZmSb4TNKEuW3Bs0uV21yIMSbxDRpaTHyDMY0YKAycgzIgEAUgSpnxI8WgQJkxJMaieqWyBEskxE5ghFxNQ_hN6p3eZApR4gNwRiiu6E2hs4k7eKk2zDm3NyJ-O3nePqfvsePaLGtogBmZ_MLm_n_QCgwJeZpM5kMR-rr4Hv1uxZ6A&e=1771827102&fl=&r=9e2f2c87-3737-4c6b-9777-b7b0091fc103-1&k=K4SN-69RStiU6kvXx2WxYw&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=49&s=ur25Vp57Gx5Uk4X0enpy_uwSC4M&cd=i"
             target="_blank"
             rel="noopener noreferrer"
           >
