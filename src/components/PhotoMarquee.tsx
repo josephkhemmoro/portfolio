@@ -1,3 +1,7 @@
+import { useRef, useEffect } from "react";
+
+const SPEED = .2; // px per frame at 60 fps
+
 const PhotoMarquee = () => {
   // Auto-import all images in the about folder as URLs (Vite feature)
   const modules = import.meta.glob("@/assets/about/*.{png,jpg,jpeg,webp,svg}", {
@@ -10,19 +14,42 @@ const PhotoMarquee = () => {
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([, url]) => url);
 
-  // Duplicate the list to create a seamless loop
+  // Two copies so the loop has something to slide into
   const loop = [...files, ...files];
+
+  const trackRef = useRef<HTMLDivElement>(null);
+  const xRef     = useRef(0);
+  const rafRef   = useRef<number>(0);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const tick = () => {
+      xRef.current -= SPEED;
+
+      // scrollWidth is the full width of both copies.
+      // When we've scrolled exactly one copy's worth, jump back
+      // by the same amount — the content looks identical so the
+      // reset is completely invisible.
+      const half = track.scrollWidth / 2;
+      if (half > 0 && xRef.current <= -half) {
+        xRef.current += half;
+      }
+
+      track.style.transform = `translateX(${xRef.current}px)`;
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, []);
 
   return (
     <div className="relative overflow-hidden">
       <div
-        className="flex w-max gap-4 will-change-transform animate-marquee"
-        style={{
-          // adjust to taste; larger = slower
-          // 40s default, override by setting --marquee-duration on parent
-          // @ts-ignore - CSS var string ok
-          '--marquee-duration': '30s',
-        }}
+        ref={trackRef}
+        className="flex w-max gap-4 will-change-transform"
       >
         {loop.map((src, i) => (
           <div key={i} className="rounded-3xl overflow-hidden border border-portfolio-border/30 shadow-xl flex-none">
