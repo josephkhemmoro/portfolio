@@ -13,6 +13,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "Car Damage Detection",
+    description: "Deep learning pipeline for detecting and classifying vehicle damage — dents, scratches, cracks, and more — using YOLOv8 and YOLO11.",
+    link: "https://github.com/josephkhemmoro/car-damage-detection",
+    icon: "🚘",
+    iconBg: "bg-red-500/10",
+  },
+  {
     name: "AstraERP",
     description: "Award-winning multi-tenant SaaS ERP for small businesses with AI-powered scheduling and inventory management using IBM WatsonX.",
     link: "https://github.com/josephkhemmoro/astra-erp",

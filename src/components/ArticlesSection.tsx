@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 const ArticlesSection = () => {
   const articles = [
     {
+      date: "December 5, 2025",
+      title: "Car Damage Detection using YOLOv8 & YOLO11",
+      description:
+        "A deep learning pipeline for detecting and classifying vehicle damage — dents, scratches, cracks, shattered glass, lamp damage, and flat tires — using YOLOv8 and YOLO11 trained on the CarDD dataset.",
+      url: "/articles/car-damage-detection",
+    },
+    {
       date: "November 22, 2025",
       title: "AstraERP: Building a Winning AI-Powered ERP at MI DevFest Hackathon",
       description:

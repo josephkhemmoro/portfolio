@@ -13,6 +13,7 @@ import RayDxArticle from "./pages/articles/RayDx";
 import DTEHackathonArticle from "./pages/articles/DTEHackathon";
 import ActivePotholeDetectionArticle from "./pages/articles/ActivePotholeDetection";
 import AstraERPArticle from "./pages/articles/AstraERP";
+import CarDamageDetectionArticle from "./pages/articles/CarDamageDetection";
 import Articles from "./pages/Articles";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const AppRoutes = () => {
         <Route path="/articles/dte-hackathon" element={<DTEHackathonArticle />} />
         <Route path="/articles/active-pothole-detection" element={<ActivePotholeDetectionArticle />} />
         <Route path="/articles/astra-erp" element={<AstraERPArticle />} />
+        <Route path="/articles/car-damage-detection" element={<CarDamageDetectionArticle />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -10,6 +10,13 @@ const Articles = () => {
 
   const articles = [
     {
+      date: "December 5, 2025",
+      title: "Car Damage Detection using YOLOv8 & YOLO11",
+      summary:
+        "A deep learning pipeline that detects and classifies six types of vehicle damage — dents, scratches, cracks, shattered glass, lamp damage, and flat tires — using YOLOv8 and YOLO11 fine-tuned on the CarDD dataset, with modular scripts for data preparation, training, inference, and evaluation.",
+      to: "/articles/car-damage-detection",
+    },
+    {
       date: "November 22, 2025",
       title: "AstraERP: Building a Winning AI-Powered ERP at MI DevFest Hackathon",
       summary:
