@@ -59,6 +59,47 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  @keyframes drawer-enter {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0); }
+  }
+
+  @keyframes drawer-exit {
+    from { transform: translateX(0); }
+    to   { transform: translateX(100%); }
+  }
+
+  @keyframes overlay-enter {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes overlay-exit {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+  @keyframes drawer-link-enter {
+    from { opacity: 0; transform: translateX(18px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  .drawer-open {
+    animation: drawer-enter 0.3s cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+
+  .drawer-close {
+    animation: drawer-exit 0.25s cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+
+  .overlay-open {
+    animation: overlay-enter 0.25s ease both;
+  }
+
+  .overlay-close {
+    animation: overlay-exit 0.25s ease both;
+  }
+
   @keyframes page-enter {
     from {
       opacity: 0;
