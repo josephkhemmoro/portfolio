@@ -21,7 +21,7 @@ const PhotoMarquee = () => {
           // adjust to taste; larger = slower
           // 40s default, override by setting --marquee-duration on parent
           // @ts-ignore - CSS var string ok
-          '--marquee-duration': '60s',
+          '--marquee-duration': '30s',
         }}
       >
         {loop.map((src, i) => (
