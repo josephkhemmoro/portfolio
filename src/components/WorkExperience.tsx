@@ -2,11 +2,12 @@ import { Briefcase, GraduationCap, Code, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import dteLogo from "../assets/dtelogo.png";
 import mangoLogo from "../assets/mangologo.svg";
+import gracefoodmarket from "../assets/gracefoodmarket.jpg";
 
 const WorkExperience = () => {
   const workExperiences = [
     {
-      company: "Mango Cannabis",
+      company: "Mango",
       position: "Software Developer Intern",
       duration: "Jan. 2026 — Present",
       logoUrl: mangoLogo
@@ -21,7 +22,7 @@ const WorkExperience = () => {
       company: "Annabel Inc.",
       position: "IT & Systems Engineer", 
       duration: "Aug. 2023 — Feb. 2025",
-      logoUrl: "https://gracefoodmarket.net/wp-content/uploads/2020/12/grace-logo.png"
+      logoUrl: gracefoodmarket
     },
     {
       company: "The Global Tech Experience",
