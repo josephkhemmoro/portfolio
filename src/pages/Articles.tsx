@@ -10,6 +10,13 @@ const Articles = () => {
 
   const articles = [
     {
+      date: "November 22, 2025",
+      title: "AstraERP: Building a Winning AI-Powered ERP at MI DevFest Hackathon",
+      summary:
+        "AstraERP is a production-ready, multi-tenant SaaS ERP built for the MI DevFest Hackathon — and won. It combines AI-powered employee scheduling and inventory management using IBM WatsonX, complete business data isolation via Supabase Row-Level Security, Instacart integration for ordering, and white-label branding — all built with FastAPI and React in under 48 hours.",
+      to: "/articles/astra-erp",
+    },
+    {
       date: "November 5, 2025",
       title: "Active Pothole Detection using YOLOv8",
       summary:

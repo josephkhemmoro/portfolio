@@ -13,6 +13,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "AstraERP",
+    description: "Award-winning multi-tenant SaaS ERP for small businesses with AI-powered scheduling and inventory management using IBM WatsonX.",
+    link: "https://github.com/josephkhemmoro/astra-erp",
+    icon: "🏢",
+    iconBg: "bg-orange-500/10",
+  },
+  {
     name: "Pothole Detector",
     description: "AI-powered pothole detection system using computer vision and machine learning to identify road damage.",
     link: "https://github.com/josephkhemmoro/active_pothole_detection",

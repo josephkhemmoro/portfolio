@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 const ArticlesSection = () => {
   const articles = [
     {
+      date: "November 22, 2025",
+      title: "AstraERP: Building a Winning AI-Powered ERP at MI DevFest Hackathon",
+      description:
+        "How I built and won MI DevFest Hackathon with a multi-tenant small business ERP using IBM WatsonX for AI scheduling and inventory, Supabase for data isolation, and Instacart integration for automated ordering.",
+      url: "/articles/astra-erp",
+    },
+    {
       date: "November 5, 2025",
       title: "Active Pothole Detection using YOLOv8",
       description:
