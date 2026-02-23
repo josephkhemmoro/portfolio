@@ -59,6 +59,21 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  @keyframes page-enter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-transition {
+    animation: page-enter 0.35s ease-out both;
+  }
+
   @keyframes marquee-scroll-x {
     from {
       transform: translateX(0);
