@@ -15,13 +15,13 @@ const WorkExperience = () => {
     {
       company: "Mango",
       position: "Software Developer Intern",
-      duration: "Jan. 2026 — Present",
+      duration: "Jan. 2026 — June 2026",
       logoUrl: mangoLogo
     },
     {
       company: "DTE Energy",
       position: "Software Developer Intern",
-      duration: "Feb. 2025 — Present",
+      duration: "Feb. 2025 — Jan. 2026",
       logoUrl: dteLogo
     },
     {
