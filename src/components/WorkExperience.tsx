@@ -7,6 +7,12 @@ import gracefoodmarket from "../assets/gracefoodmarket.jpg";
 const WorkExperience = () => {
   const workExperiences = [
     {
+      company: "Siemens",
+      position: "Software Developer Intern",
+      duration: "June 2026 — Present",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Siemens-logo.svg"
+    },
+    {
       company: "Mango",
       position: "Software Developer Intern",
       duration: "Jan. 2026 — Present",
