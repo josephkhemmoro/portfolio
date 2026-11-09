@@ -13,7 +13,7 @@ const MyndraArticle = () => {
       <Navigation />
 
       <main className="flex-1">
-        <div className="max-w-3xl mx-auto px-6 pt-28 pb-16">
+        <div className="max-w-3xl mx-auto px-6 pt-12 md:pt-16 pb-16">
           <nav className="mb-8 text-xs sm:text-sm">
             <Link to="/" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Home</Link>
             <span className="mx-2 text-portfolio-text-muted">/</span>

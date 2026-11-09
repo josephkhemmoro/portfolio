@@ -51,6 +51,7 @@ export default {
         portfolio: {
           bg: "hsl(var(--portfolio-bg))",
           surface: "hsl(var(--portfolio-surface))",
+          border: "hsl(var(--portfolio-border))",
           text: "hsl(var(--portfolio-text))",
           "text-muted": "hsl(var(--portfolio-text-muted))",
           accent: "hsl(var(--portfolio-accent))",

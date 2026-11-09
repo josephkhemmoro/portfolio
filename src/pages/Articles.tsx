@@ -64,10 +64,10 @@ const Articles = () => {
     <div className="min-h-screen bg-portfolio-bg flex flex-col">
       <Navigation />
       <main className="flex-1">
-        <div className="max-w-5xl mx-auto px-6 pt-28 pb-16">
+        <div className="max-w-5xl mx-auto px-6 pt-12 md:pt-16 pb-16">
           <header className="mb-10">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3">Articles</h1>
-            <p className="text-sm sm:text-base text-portfolio-text-muted">Writings on the details and process behind all of my projects as well as the tech stacks behind them, collected in chronological order.</p>
+            <p className="text-sm sm:text-base text-portfolio-text-muted">Technical write-ups on computer vision, AI, and the systems behind earlier projects.</p>
           </header>
 
           <div className="space-y-10">

@@ -1,65 +1,23 @@
-import { useRef, useEffect } from "react";
+const photos = Object.entries(import.meta.glob("@/assets/about/*.webp", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}))
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, src]) => src as string);
 
-const SPEED = .2; // px per frame at 60 fps
-
-const PhotoMarquee = () => {
-  // Auto-import all images in the about folder as URLs (Vite feature)
-  const modules = import.meta.glob("@/assets/about/*.{png,jpg,jpeg,webp,svg}", {
-    eager: true,
-    as: "url",
-  }) as Record<string, string>;
-
-  // Stable order by filename
-  const files = Object.entries(modules)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([, url]) => url);
-
-  // Two copies so the loop has something to slide into
-  const loop = [...files, ...files];
-
-  const trackRef = useRef<HTMLDivElement>(null);
-  const xRef     = useRef(0);
-  const rafRef   = useRef<number>(0);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const tick = () => {
-      xRef.current -= SPEED;
-
-      // scrollWidth is the full width of both copies.
-      // When we've scrolled exactly one copy's worth, jump back
-      // by the same amount — the content looks identical so the
-      // reset is completely invisible.
-      const half = track.scrollWidth / 2;
-      if (half > 0 && xRef.current <= -half) {
-        xRef.current += half;
-      }
-
-      track.style.transform = `translateX(${xRef.current}px)`;
-      rafRef.current = requestAnimationFrame(tick);
-    };
-
-    rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, []);
-
+export default function PhotoMarquee() {
   return (
-    <div className="relative overflow-hidden">
-      <div
-        ref={trackRef}
-        className="flex w-max gap-4 will-change-transform"
-      >
-        {loop.map((src, i) => (
-          <div key={i} className="rounded-3xl overflow-hidden border border-portfolio-border/30 shadow-xl flex-none">
-            {/* eslint-disable-next-line jsx-a11y/alt-text */}
-            <img src={src} className="h-48 sm:h-56 md:h-64 w-auto object-cover" />
-          </div>
-        ))}
-      </div>
+    <div className="flex gap-4 overflow-x-auto pb-3" role="region" aria-label="Personal photos" tabIndex={0}>
+      {photos.map((src) => (
+        <img
+          key={src}
+          src={src}
+          alt=""
+          loading="lazy"
+          className="h-48 w-auto shrink-0 rounded-2xl border border-portfolio-border/30 object-cover sm:h-56"
+        />
+      ))}
     </div>
   );
-};
-
-export default PhotoMarquee;
+}
