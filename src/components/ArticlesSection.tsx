@@ -1,24 +1,110 @@
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { projectArticles } from "@/data/projects";
 
-const articles = [
-  { title: "Car Damage Detection with YOLOv8 and YOLO11", url: "/articles/car-damage-detection" },
-  { title: "Building AstraERP at the MI DevFest Hackathon", url: "/articles/astra-erp" },
-  { title: "Detecting Potholes with Computer Vision", url: "/articles/active-pothole-detection" },
-];
+const ArticlesSection = () => {
+  const articles = [
+    ...projectArticles,
+    {
+      date: "December 5, 2025",
+      title: "Car Damage Detection using YOLOv8 & YOLO11",
+      description:
+        "A deep learning pipeline for detecting and classifying vehicle damage — dents, scratches, cracks, shattered glass, lamp damage, and flat tires — using YOLOv8 and YOLO11 trained on the CarDD dataset.",
+      url: "/articles/car-damage-detection",
+    },
+    {
+      date: "November 22, 2025",
+      title: "AstraERP: Building a Winning AI-Powered ERP at MI DevFest Hackathon",
+      description:
+        "How I built and won MI DevFest Hackathon with a multi-tenant small business ERP using IBM WatsonX for AI scheduling and inventory, Supabase for data isolation, and Instacart integration for automated ordering.",
+      url: "/articles/astra-erp",
+    },
+    {
+      date: "November 5, 2025",
+      title: "Active Pothole Detection using YOLOv8",
+      description:
+        "Real-time pothole detection on road surfaces using YOLOv8, Python, and OpenCV, drawing bounding boxes around hazards in images or video streams for inspection and monitoring.",
+      url: "/articles/active-pothole-detection",
+    },
+    {
+      date: "October 3, 2025",
+      title: "DTE Energy Hackathon: Optimized Routing Simulator for Outage Dispatch Crews",
+      description:
+        "Built an intelligent routing optimization system during a DTE hackathon to help dispatch crews respond to power outages more efficiently with real-time route optimization.",
+      url: "/articles/dte-hackathon",
+    },
+    {
+      date: "September 24, 2025",
+      title: "Myndra: A Multi-Agent Orchestration Platform for Collaborative, Human‑Like AI",
+      description:
+        "Introducing Myndra, a platform for coordinating human-like AI agents with shared memory and knowledge graphs, with a radiology-focused prototype.",
+      url: "/articles/myndra",
+    },
+    {
+      date: "August 8, 2025",
+      title: "DTE Energy: Microsoft Teams Chatbot on Azure Functions",
+      description:
+        "How I engineered a modular TypeScript Azure Functions app with ServiceNow integrations and Terraform to power enterprise chatbot workflows.",
+      url: "/articles/dte",
+    },
+    {
+      date: "June 15, 2025",
+      title: "RayDx Backend: Pneumonia Detection API",
+      description:
+        "Chest X-ray pneumonia detection using a fine-tuned MobileNetV2 with xAI Grok-3 report generation and production-ready Flask APIs.",
+      url: "/articles/raydx",
+    },
+  ];
 
-export default function ArticlesSection() {
   return (
-    <section aria-labelledby="home-articles">
-      <h2 className="subsection-title" id="home-articles">From the archive</h2>
-      <ul className="home-article-list">
-        {articles.map(({ title, url }) => (
-          <li key={url}><Link to={url}>{title} <ArrowRight size={16} aria-hidden="true" /></Link></li>
-        ))}
-      </ul>
-      <Link className="portfolio-link mt-5" to="/articles">
-        Browse articles <ArrowRight size={16} aria-hidden="true" />
-      </Link>
-    </section>
+    <div>
+      <h2 className="text-2xl sm:text-3xl font-bold text-portfolio-text mb-8 sm:mb-12">
+        What I've Been Working On...
+      </h2>
+      
+      <div className="space-y-8 sm:space-y-12">
+  {articles.map((article, i) => (
+    <article key={i} className="group">
+      <div className="flex items-start gap-4">
+        <div className="w-1 h-12 sm:h-16 bg-portfolio-surface rounded-full flex-shrink-0 mt-1" />
+        <div className="flex-1">
+          <time className="text-xs sm:text-sm text-portfolio-text-muted mb-2 block">{article.date}</time>
+
+          {/* narrower title width */}
+          <h3 className="text-lg sm:text-xl font-semibold text-portfolio-text mb-3 group-hover:text-portfolio-accent transition-colors duration-200
+                         max-w-[48ch] text-balance">
+            {article.title}
+          </h3>
+
+          {article.description && (
+            // narrower body width + pleasant wrapping
+            <p className="text-sm sm:text-base text-portfolio-text-muted leading-relaxed mb-4 max-w-[65ch] text-pretty hyphens-auto">
+              {article.description}
+            </p>
+          )}
+
+          {article.url ? (
+            <Link
+              to={article.url}
+              className="inline-flex items-center text-portfolio-accent hover:text-portfolio-accent/80 transition-colors duration-200 text-sm sm:text-base"
+            >
+              Read article <ChevronRight className="w-4 h-4 ml-1" />
+            </Link>
+          ) : (
+            <span
+              aria-disabled
+              className="inline-flex items-center text-portfolio-text-muted cursor-not-allowed text-sm sm:text-base"
+            >
+              Read article <ChevronRight className="w-4 h-4 ml-1" />
+            </span>
+          )}
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
+    </div>
   );
-}
+};
+
+export default ArticlesSection;

@@ -1,36 +1,29 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { caseStudies } from "@/data/projects";
 import Navigation from "./Navigation";
 import HeroSection from "./HeroSection";
-import ProjectCard from "./ProjectCard";
 import ArticlesSection from "./ArticlesSection";
 import WorkExperience from "./WorkExperience";
 import Footer from "./Footer";
 
-export default function PortfolioLayout() {
+const PortfolioLayout = () => {
   return (
-    <>
+    <div className="min-h-screen bg-portfolio-bg flex flex-col">
       <Navigation />
-      <main>
+      <main className="flex-1 pb-8 md:pb-12">
         <HeroSection />
-        <section id="selected-work" className="site-container portfolio-section">
-          <div className="section-heading">
-            <h2>Selected work</h2>
-            <Link className="portfolio-link" to="/projects">
-              All projects <ArrowRight size={17} aria-hidden="true" />
-            </Link>
+        <div className="max-w-6xl mx-auto px-6 bg-portfolio-bg py-5 md:py-1">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <ArticlesSection />
+            </div>
+            <div className="lg:sticky lg:top-24">
+              <WorkExperience />
+            </div>
           </div>
-          <div className="project-grid">
-            {caseStudies.slice(0, 2).map((project) => <ProjectCard key={project.slug} project={project} />)}
-          </div>
-        </section>
-        <div className="site-container portfolio-section home-details">
-          <WorkExperience />
-          <ArticlesSection />
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
-}
+};
+
+export default PortfolioLayout;

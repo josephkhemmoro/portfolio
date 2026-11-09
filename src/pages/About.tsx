@@ -12,27 +12,41 @@ const About = () => {
       <Navigation />
 
       <main className="flex-1">
-        <section className="max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-12">
+        <section className="max-w-6xl mx-auto px-6 pt-28 md:pt-36 pb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div>
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-portfolio-text mb-6">
-                About me
+                I’m Joseph Khemmoro. I live in South Lyon, studying Software Engineering.
               </h1>
 
               <div className="prose prose-invert max-w-none text-portfolio-text-muted">
                 <p>
-                  I grew up in South Lyon, Michigan, and study computer science at Wayne State University.
-                  I’m a software developer intern at Siemens and a co-founder of Myndra, a multi-agent AI platform.
+                  I grew up in South Lyon, Michigan, and I’m now studying computer science 
+                  at Wayne State University with a focus on software engineering. The work is 
+                  consistently challenging, but I’m drawn to that difficulty because 
+                  solving complex problems is what motivates me.
                 </p>
-                <Separator className="my-4 bg-portfolio-border/20" />
+                <Separator className="my-2 bg-portfolio-border/20" />
                 <p>
-                  I like working on the parts of a product that make it dependable in everyday use.
-                  On Kova, that meant turning retailer emails into a consistent order history.
-                  On Shiftly, it meant connecting the manager dashboard to scheduling and account workflows.
+                  At Wayne State University, I’ve worked hard to maintain strong academic performance
+                   in computer science while pursuing my long-term goal of becoming a software engineer. 
+                   My coursework reflects the same qualities I bring to every project—discipline, consistency, 
+                   and a genuine drive to understand how things work at a deep level. I’m also drawn to big data and AI, 
+                   and studying it on my free time adds variety to my learning and strengthens the
+                    mindset I use in all walks of life.
                 </p>
-                <Separator className="my-4 bg-portfolio-border/20" />
+                <Separator className="my-2 bg-portfolio-border/20" />
                 <p>
-                  Away from my desk, I like playing video games, driving, and spending time with friends and family.
+                  Outside of work, I like learning new technologies, playing video games,
+                   and collaborating with friends on meaningful projects. 
+                   When I’m not at the keyboard, you’ll probably find me with
+                  friends and family, or driving my car.
+                </p>
+                <Separator className="my-2 bg-portfolio-border/20" />
+                <p>
+                  I’m always open to interesting problems, collaboration, and
+                  opportunities. If something here resonates, reach out – I’d love to
+                  connect.
                 </p>
               </div>
 

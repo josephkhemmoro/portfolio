@@ -1,16 +1,22 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="site-footer">
-      <div className="site-container site-footer-inner">
-        <p>© {new Date().getFullYear()} Joseph Khemmoro</p>
-        <nav aria-label="Contact links">
-          <a href="https://github.com/josephkhemmoro"><Github size={16} aria-hidden="true" /> GitHub</a>
-          <a href="https://www.linkedin.com/in/josephkhemmoro/"><Linkedin size={16} aria-hidden="true" /> LinkedIn</a>
-          <a href="mailto:josephkhemmoro@gmail.com"><Mail size={16} aria-hidden="true" /> Email</a>
-        </nav>
+    <footer className="mt-8 md:mt-12 border-t border-portfolio-border/20 bg-portfolio-bg">
+      <div className="max-w-6xl mx-auto px-6 py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <nav className="flex items-center gap-6 text-sm">
+            <Link to="/about" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200">About</Link>
+            <Link to="/articles" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200">Articles</Link>
+            <Link to="/projects" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200">Projects</Link>
+          </nav>
+          <p className="text-xs text-portfolio-text-muted">
+            {new Date().getFullYear()} Joseph Khemmoro. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

@@ -1,9 +1,7 @@
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import mtgOverlay from "@/assets/mtg-overlay.png";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import { ProjectFlow } from "@/components/ProjectCard";
 import { caseStudies } from "@/data/projects";
 import NotFound from "./NotFound";
 
@@ -11,51 +9,56 @@ export default function ProjectDetails() {
   const { slug } = useParams();
   const project = caseStudies.find((entry) => entry.slug === slug);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [slug]);
+
   if (!project) return <NotFound />;
 
+  const bodyText = "text-sm sm:text-base text-portfolio-text-muted leading-relaxed";
+
   return (
-    <>
+    <div className="min-h-screen bg-portfolio-bg flex flex-col">
       <Navigation />
-      <main className="site-container portfolio-page">
-        <Link className="portfolio-link" to="/projects"><ArrowLeft size={16} aria-hidden="true" /> All projects</Link>
-        <header className="portfolio-page-heading case-heading">
-          <p className="portfolio-label">{project.category}</p>
-          <h1>{project.name}</h1>
-          <p>{project.headline}</p>
-        </header>
-        <div className="case-layout">
-          <article className="case-body">
-            <h2>Overview</h2>
-            <p>{project.context}</p>
-            <h2>{project.slug === "kova-aco" || project.slug === "shiftly" ? "What I worked on" : "How it works"}</h2>
+      <main className="flex-1">
+        <article className="max-w-3xl mx-auto px-6 pt-28 pb-16">
+          <nav className="mb-8 text-xs sm:text-sm" aria-label="Breadcrumb">
+            <Link to="/" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Home</Link>
+            <span className="mx-2 text-portfolio-text-muted">/</span>
+            <Link to="/projects" className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors">Projects</Link>
+            <span className="mx-2 text-portfolio-text-muted">/</span>
+            <span className="text-portfolio-text">{project.name}</span>
+          </nav>
+          <header className="mb-10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-4">{project.name}</h1>
+            <p className={bodyText}>{project.summary}</p>
+          </header>
+          <div className="space-y-8 sm:space-y-10">
+            <section>
+              <h2 className="text-xl font-semibold text-portfolio-text mb-3">Project Overview</h2>
+              <p className={bodyText}>{project.context}</p>
+            </section>
             {project.contributions.map(({ title, detail }) => (
               <section key={title}>
-                <h3>{title}</h3>
-                <p>{detail}</p>
+                <h2 className="text-xl font-semibold text-portfolio-text mb-3">{title}</h2>
+                <p className={bodyText}>{detail}</p>
               </section>
             ))}
-          </article>
-          <aside className="case-sidebar" aria-label="Project details">
-            <ProjectFlow project={project} />
-            <div className="case-tools">
-              <h2>Built with</h2>
-              <ul>{project.stack.map((tool) => <li key={tool}>{tool}</li>)}</ul>
-              {project.source && (
-                <a className="portfolio-link" href={project.source}>
-                  View source on GitHub <ArrowUpRight size={16} aria-hidden="true" />
-                </a>
-              )}
-            </div>
-          </aside>
-        </div>
-        {project.slug === "mtg-chase-workbench" && (
-          <figure className="case-example">
-            <img src={mtgOverlay} width="1280" height="720" loading="lazy" alt="Portrait OBS preview with two selected Magic cards below the camera area" />
-            <figcaption>Example stream layout with cards from two sets. Prices reflect the October 2026 preview.</figcaption>
-          </figure>
-        )}
+            <section>
+              <h2 className="text-xl font-semibold text-portfolio-text mb-3">Technology Stack</h2>
+              <ul className="list-disc pl-6 space-y-2 text-portfolio-text-muted text-sm sm:text-base">
+                {project.stack.map((tool) => <li key={tool}>{tool}</li>)}
+              </ul>
+            </section>
+            {project.source && (
+              <a href={project.source} className="text-portfolio-accent hover:text-portfolio-accent/80">
+                View source on GitHub
+              </a>
+            )}
+          </div>
+        </article>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
